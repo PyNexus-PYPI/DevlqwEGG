@@ -7,7 +7,7 @@
   "name": "Ubuntu Installer",
   "author": "TheVeryHeavy",
   "description": "Egg that allows selection of Ubuntu version and sets up root password",
-  "image": "mydockerhub/custom-ubuntu-installer:latest",
+  "image": "theveryheavy/ubuntu-installer",
   "startup": "/bin/bash",
   "config": {
     "files": "{}",
