@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "version": "PTDL_v2",
+    "update_url": null
+  },
+  "exported_at": "2024-10-19",
+  "name": "Ubuntu Installer",
+  "author": "TheVeryHeavy",
+  "description": "Egg that allows selection of Ubuntu version and sets up root password",
+  "image": "mydockerhub/custom-ubuntu-installer:latest",
+  "startup": "/bin/bash",
+  "config": {
+    "files": "{}",
+    "startup": "{\n    \"done\": \"\" \n}",
+    "stop": "shutdown now",
+    "logs": {
+      "custom": false,
+      "location": "logs/latest.log"
+    },
+    "extends": null
+  },
+  "scripts": {
+    "installation": {
+      "script": "#!/bin/bash\napt update && apt install -y sudo nano curl dialog",
+      "container": "ubuntu:20.04",
+      "entrypoint": "bash"
+    }
+  },
+  "variables": []
+}
